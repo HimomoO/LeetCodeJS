@@ -100,3 +100,23 @@ foo.apply(m, [5]);
 foo.call(m, 5);
 var foo1 = foo.bind(m, 5);
 foo1();
+
+var a1; //a1的值为undefined
+var a2 = null;
+var a3 = NaN;
+console.log(a1 == a2); //显示"true"
+console.log(a1 === a2); //显示"false"
+console.log(a1 != a2); //显示"false"
+console.log(a1 !== a2); //显示"true"
+console.log(a1 == a3); //显示"false"
+console.log(a1 === a3); //显示"false"
+console.log(a1 != a3); //显示"true"
+console.log(a1 !== a3); //显示"true"
+console.log(a2 == a3); //显示"false"
+console.log(a2 === a3); //显示"false"
+console.log(a2 != a3); //显示"true"
+console.log(a2 !== a3); //显示"true"
+console.log(a3 == a3); //显示"false"
+console.log(a3 === a3); //显示"false"
+console.log(a3 != a3); //显示"true"
+console.log(a3 !== a3); //显示"true"
