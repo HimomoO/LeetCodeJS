@@ -45,18 +45,20 @@
 //var catlife2 = cat();
 //catlife2();
 
-a = (function () {
-    var privatefunction = function () {
-        console.log('hello');
-    };
+//a = (function () {
+//    var privatefunction = function () {
+//        console.log('hello');
+//    };
+//
+//    return {
+//        publicfunction : function () {
+//            privatefunction();
+//        }
+//    }
+//})();
+//
+//a(); //error
+//a.privatefunction(); //error
+//a.publicfunction();  //'hello'
 
-    return {
-        publicfunction : function () {
-            privatefunction();
-        }
-    }
-})();
-
-a(); //error
-a.privatefunction(); //error
-a.publicfunction();  //'hello'
+console.log(5 % 2);

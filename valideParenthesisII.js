@@ -2,9 +2,6 @@
  * Created by HimomoO on 10/29/15.
  */
 /**
- * Created by HimomoO on 10/29/15.
- */
-/**
  * Given a string of parantheses, check if the string is valid. ex: [[]] is valid, ][][ is not valid
  *
  * How would you solve if the parantheses could be of different types like {,[,(
