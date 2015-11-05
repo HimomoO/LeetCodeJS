@@ -15,8 +15,8 @@
  * }
  */
 /**
- * @param {ListNode} head
- * @return {ListNode}
+ * Solution 1: 136ms. 向后遍历 两两交换
+ * 注意： line 41时如果p1.next = null一定要break，否则无法读出next.next,会报错
  */
 
  function ListNode(val) {
@@ -25,26 +25,25 @@
  }
 
 var swapPairs = function(head) {
-    var p1 = head;
-    var p2 = head.next;
-    //if(p1 === null) return null;
-    //if(p1 !== null && p2 === null) return head;
+    if(head == null || head.next == null) return head;
 
     var fakehead = new ListNode(-1);
-    var start = fakehead;
+    var p = fakehead;
+    var p1 = head, p2 = head.next;
 
-    while( p1 !== null && p2 !== null){
-
-        start.next = p2;
+    while(p1 != null && p2 != null){
+        p1.next = p2.next;
         p2.next = p1;
-        p1.next = null;
-        start = p1;
-        console.log("start: " + start.val + " p1: " + p1.val + " p2:" + p2.val);
-        p1 = p2.next;
-        p2 = p2.next.next;
-        console.log("end: start: " + start.val + " p1: " + p1.val + " p2:" + p2.val);
+        p.next = p2;
+
+        p = p1;
+        p1 = p1.next;
+        if(p1 == null) break;
+        p2 = p1.next;
+
     }
 
+    if(p1 != null) p.next = p1;
     return fakehead.next;
 };
 

@@ -15,8 +15,10 @@ var validParenthesisII = function(str){
     tmp['{'] = 0;
     tmp['('] = 0;
     var index;
+    var last;
 
     for(var i = 0; i < str.length ; i++){
+
         if(str[i] == '[' || str[i] == '{' || str[i] == '(') {
             tmp[str[i]]++;
         }
@@ -43,19 +45,19 @@ var validParenthesisII = function(str){
     return ((tmp['['] == 0) && (tmp['{'] == 0) && (tmp['('] == 0));
 };
 //
-var s1 = '';     //true
-var s2 = '[';    //false
-var s3 = ']';    //false
-var s4 = '[[]]'; //true
-var s5 = '][]['; //false
-var s6 = '[[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]'; //true
+//var s1 = '';     //true
+//var s2 = '[';    //false
+//var s3 = ']';    //false
+//var s4 = '[[]]'; //true
+//var s5 = '][]['; //false
+//var s6 = '[[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]'; //true
 
 var t1 = '{}';    //true
 var t2 = '()';    //true
 var t3 = '[()]'; //true
 var t4 = '][]{}[('; //false
 var t5 = '[[][][][][][][][][][][][][][][][][][][][][][][]{}()([][][][])[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]'; //true
-
+var t6 = '([)]';
 //console.log('1: ' + validParenthesisII(s1));
 //console.log('2: ' + validParenthesisII(s2));
 //console.log('3: ' + validParenthesisII(s3));
@@ -68,3 +70,5 @@ console.log('t2: ' + validParenthesisII(t2));
 console.log('t3: ' + validParenthesisII(t3));
 console.log('t4: ' + validParenthesisII(t4));
 console.log('t5: ' + validParenthesisII(t5));
+console.log('t6: ' + validParenthesisII(t6));
+
