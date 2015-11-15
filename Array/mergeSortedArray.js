@@ -22,6 +22,7 @@ var merge = function(nums1, m, nums2, n) {
     while(n){
         nums1[m++]=nums2[--n];
     }
+    console.log(nums1);
     nums1.sort(function(val1, val2){
         return val1 > val2?1:val1<val2?-1:0;
     })

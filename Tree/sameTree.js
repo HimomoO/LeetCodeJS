@@ -20,7 +20,12 @@ function TreeNode(val) {
     this.val = val;
     this.left = this.right = null;
 }
-
+/**
+ * Solution: 层层遍历
+ * @param p
+ * @param q
+ * @returns {*}
+ */
 var isSameTree = function(p, q) {
     if( p === null && q === null) return true;
     else if(p.val == q.val){

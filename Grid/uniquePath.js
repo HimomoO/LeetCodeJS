@@ -17,7 +17,6 @@
  * Solution 3: 建立于solution 2上的解法，创建二维数组来储存下一层数据，故此不用层层递归和反复运算 124ms
  * 注意：
  * 1. js的二维数组跟其他不一样，一定要先初始化一维成二维数组： tmp[0] = new Array(); 否则可能null pointer
- * 2. ??? n 影响tmp[0][i], m 影响tmp[i][0], 为什么？
  *
  */
 var uniquePaths = function(m, n) {
