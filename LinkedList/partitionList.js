@@ -49,6 +49,7 @@ var partition = function(head, x) {
         tmp2.next = null;
     }
 
+
     tmp2.next = fakehead1.next;
     return fakehead2.next;
 };

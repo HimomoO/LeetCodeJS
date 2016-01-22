@@ -13,7 +13,7 @@
  */
 
 /**
- * Solution 1: 156ms. 用二维数组。从1网上遍历若n不存在则返回n
+ * Solution 1: 156ms. 用数组undefined。从1网上遍历若n不存在则返回n
  * 注意：missing positive所以0不算？
  */
 var firstMissingPositive = function(nums) {

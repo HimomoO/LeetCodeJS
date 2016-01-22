@@ -20,7 +20,8 @@
  */
 var setZeroes = function(matrix) {
     if(matrix.length === 0) return;
-    var flag = [];
+
+    var zeros = [];
     var i = 0;
     while(i < matrix.length){
 

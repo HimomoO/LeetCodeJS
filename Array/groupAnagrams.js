@@ -20,11 +20,33 @@
  */
 
 /**
- * Solution: 需要使用hash map
+ * Solution: 352ms. 使用sorted将原字符串每个子串排序（split排序再join），然后判断之前类似值是否存在，若存在则把原子串传入
+ * 最后返回mapping中所有具有相同字母的子串集合
  * @param {string[]} strs
  * @return {string[][]}
  */
 var groupAnagrams = function(strs) {
+   strs = strs.sort();
+   var mapping = {};
+   for (var i = 0; i < strs.length; i++) {
+      var str = strs[i];
+      var sorted = str.split('').sort().join('');
+//console.log(sorted);
+
+      if (mapping[sorted] === undefined) {
+          mapping[sorted] = [str];
+      } else {
+          mapping[sorted].push(str);
+      }
+   }
+   //console.log(mapping);
+   var output = [];
+   for (var arr in mapping) {
+      //console.log(mapping[arr])
+      output.push(mapping[arr]);
+   }
+
+   return output;
 };
 
 var t1 = ["eat", "tea", "tan", "ate", "nat", "bat"];
